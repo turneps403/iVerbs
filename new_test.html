@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+    <script>
+		(function( $ ) {
+            // https://learn.jquery.com/plugins/advanced-plugin-concepts/
+            
+		    $.fn.bsGridEngineer = function(options) {
+                var opts = $.extend( {}, $.fn.bsGridEngineer.defaults, options );
+                
+                //var grideditor = this.data('grideditor');
+                
+		        var new_row = opts.addNewRow(opts["id-main-canvas"], opts["id-row-html"]);
+		        var new_col = opts.addNewCol(new_row, opts["id-col-html"]);
+		        opts.setColContent(new_col);
+		        
+		        
+		        return this;
+		 
+		    };
+		    
+		    $.fn.bsGridEngineer.defaults = {
+		        "id-main-canvas": "#BS-MAIN-CANVAS",
+		        "id-row-html": "#SOURCE-ROW-BLOCK",
+		        "id-col-html": "#SOURCE-COL-BLOCK",
+                "addNewRow" : (target, source_row_container) => {
+                    var row_el = $( $(source_row_container).html() );
+                    // var uniq_id = (new Date().getTime() + '.rnd' + Math.floor(Math.random() * 1000));
+                    // row_el.filter("div[name=\"COLS-HOLDER\"]").attr("id", uniq_id);
+                    // row_el.removeClass("d-none");
+                    $(target).append(row_el);
+                    return row_el.filter("div[name=\"COLS-HOLDER\"]");
+                },
+                "addNewCol" : (target, source_col_container) => {
+                    var col_el = $( $(source_col_container).html() );
+                    // col_el.removeClass("d-none");
+                    $(target).append(col_el);
+                    return col_el.find("div[name=\"COL-CONTENT-CONTAINER\"]");
+                },
+                "setColContent": (col) => {
+                    $(col).append($("#COL-DEFAULT-CONTENT").html());
+                    return;
+                }
+		    };
+		    
+		    function debug() {
+		        // set prefix
+		        if ( window.console && window.console.log ) {
+                    var args = [...arguments];
+                    args.unshift("bsGridEngineer:"); 
+                    console.debug.apply(null, args);
+		        }
+		    };
+		    
+		}( jQuery ));
+		
+		
+		$( document ).ready(function() {
+		    //$("body div.container div.container-fluid").bsGridEngineer();
+		    $().bsGridEngineer();
+		    
+		    
+		});
+		
+    </script>
+    
+    <style>
+    </style>
+    
+  </head>
+  <body>
+<div class="container">
+	<h3>
+        &#8801; bsGridEngineer
+        <small class="text-muted">very simple editor for the bootstrap grid system</small>
+        <button type="button" class="btn btn-outline-dark btn-sm" style="font-size: 37%; font-weight: bolder;">
+            <div class="container-fluid">
+	            <div class="row">
+	                <div class="col"><span style="font-size: 120%;">+</span> row</div>
+	            </div>
+	        </div>
+	    </button>
+	</h3>
+	
+	<div class="container-fluid p-0 " id="BS-MAIN-CANVAS"></div>
+	
+</div>    
+    
+<!-- SOURCE-ROW-BLOCK -->
+
+    <div class="container-fluid p-1 d-none" id="SOURCE-ROW-BLOCK">
+        <div class="row border border-secondary border-bottom-0" style="background-color: #f4f4f4; border-color: #999; color: #666;" name="TORPEDO">
+            <div class="col-8 p-1">
+                <button type="button" class="btn btn-outline-dark btn-sm" style="font-size: 67%; font-weight: bolder;">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col"><span style="font-size: 120%;">+</span> col</div>
+                        </div>
+                    </div>
+                </button>
+            </div>
+            <div class="col-4 p-1 text-right">
+                <button type="button" class="btn btn-outline-dark btn-sm" style="font-weight: bolder;">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">&times;</div>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div class="row p-1 border border-secondary border-top-0" style="background-color: white; border-color: #999; color: #666;" name="COLS-HOLDER">
+        </div>
+    </div>
+    
+<!-- /SOURCE-ROW-BLOCK -->
+
+<!-- SOURCE-COL-BLOCK -->
+
+    <div class="container-fluid p-1 d-none" id="SOURCE-COL-BLOCK">
+        <div class="col-8 border border-secondary" style="background-color: #f4f4f4; border-color: #999; color: #666;">
+            
+            
+	        <div class="row" style="background-color: #f4f4f4; border-color: #999; color: #666;" name="TORPEDO">
+	            <div class="col-8 p-1">
+	                <button type="button" class="btn btn-outline-dark btn-sm" style="font-size: 67%; font-weight: bolder;">
+	                    <div class="container-fluid">
+	                        <div class="row">
+	                            <div class="col"><span style="font-size: 120%;">+</span> row</div>
+	                        </div>
+	                    </div>
+	                </button>
+	                <button type="button" class="btn btn-outline-dark btn-sm" style="font-size: 67%; font-weight: bolder;">
+	                    <div class="container-fluid">
+	                        <div class="row">
+	                            <div class="col"><span style="font-size: 120%;">&#8592; &#8594;</span></div>
+	                        </div>
+	                    </div>
+	                </button>
+                    <button type="button" class="btn btn-outline-dark btn-sm" style="font-size: 67%; font-weight: bolder;">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col"><span style="font-size: 120%;">&#8594;&#8226;&#8592;</span></div>
+                            </div>
+                        </div>
+                    </button>
+	            </div>
+	            <div class="col-4 p-1 text-right">
+	                <button type="button" class="btn btn-outline-dark btn-sm" style="font-weight: bolder;">
+	                    <div class="container-fluid">
+	                        <div class="row">
+	                            <div class="col">&times;</div>
+	                        </div>
+	                    </div>
+	                </button>
+	            </div>
+	        </div>
+	        <div class="row p-1" style="background-color: white; border-color: #999; color: #666;" name="COL-CONTENT-CONTAINER">
+	        </div>
+        </div>
+    </div>
+    
+<!-- /SOURCE-COL-BLOCK -->
+
+<!-- COL-DEFAULT-CONTENT -->
+
+    <div class="container-fluid p-1 d-none" id="COL-DEFAULT-CONTENT">
+        Content<br>
+        Content<br>
+        Content<br>
+        Content
+    </div>
+    
+<!-- /COL-DEFAULT-CONTENT -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<!--
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
