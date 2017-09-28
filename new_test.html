@@ -16,25 +16,49 @@
             // https://learn.jquery.com/plugins/advanced-plugin-concepts/
             
 		    $.fn.bsGridEngineer = function(options) {
+                // if ($.fn.bsGridEngineer.singletone) return $.fn.bsGridEngineer.singletone;
+
                 var opts = $.extend( {}, $.fn.bsGridEngineer.defaults, options );
                 
                 //var grideditor = this.data('grideditor');
                 
-		        var new_row = opts.addNewRow(opts["id-main-canvas"], opts["id-row-html"]);
-		        var new_col = opts.addNewCol(new_row, opts["id-col-html"]);
-		        opts.setColContent(new_col);
+		        var new_row = $.fn.bsGridEngineer.addNewRow(opts["id-main-canvas"], opts["id-row-html"]);
+		        var new_col = $.fn.bsGridEngineer.addNewCol(new_row, opts["id-col-html"]);
+		        $.fn.bsGridEngineer.setColContent(new_col);
 		        
-		        
+		        // $.fn.bsGridEngineer.singletone = this;
 		        return this;
 		 
 		    };
 		    
+            $.fn.bsGridEngineer.addNewRow = (target, source_row_container) => {
+                // console.log("start addNewRow");
+                var row_el = $( $(source_row_container || $.fn.bsGridEngineer.defaults["id-row-html"]).html() );
+                // var uniq_id = (new Date().getTime() + '.rnd' + Math.floor(Math.random() * 1000));
+                // row_el.filter("div[name=\"COLS-HOLDER\"]").attr("id", uniq_id);
+                // row_el.removeClass("d-none");
+                $(target).append(row_el);
+                return row_el.find("div[name=\"COLS-HOLDER\"]");
+            };
+
+            $.fn.bsGridEngineer.addNewCol = (target, source_col_container) => {
+                var col_el = $( $(source_col_container || $.fn.bsGridEngineer.defaults["id-col-html"]).html() );
+                // col_el.removeClass("d-none");
+                $(target).append(col_el);
+                return col_el.find("div[name=\"COL-CONTENT-CONTAINER\"]");
+            };
+
+            $.fn.bsGridEngineer.setColContent = (col) => {
+                $(col).append($("#COL-DEFAULT-CONTENT").html());
+                return;
+            };
+
 		    $.fn.bsGridEngineer.defaults = {
 		        "id-main-canvas": "#BS-MAIN-CANVAS",
 		        "id-row-html": "#SOURCE-ROW-BLOCK",
 		        "id-col-html": "#SOURCE-COL-BLOCK",
                 "addNewRow" : (target, source_row_container) => {
-                    var row_el = $( $(source_row_container).html() );
+                    var row_el = $( $(source_row_container || $.fn.bsGridEngineer.defaults["id-row-html"]).html() );
                     // var uniq_id = (new Date().getTime() + '.rnd' + Math.floor(Math.random() * 1000));
                     // row_el.filter("div[name=\"COLS-HOLDER\"]").attr("id", uniq_id);
                     // row_el.removeClass("d-none");
@@ -42,7 +66,7 @@
                     return row_el.filter("div[name=\"COLS-HOLDER\"]");
                 },
                 "addNewCol" : (target, source_col_container) => {
-                    var col_el = $( $(source_col_container).html() );
+                    var col_el = $( $(source_col_container || $.fn.bsGridEngineer.defaults["id-col-html"]).html() );
                     // col_el.removeClass("d-none");
                     $(target).append(col_el);
                     return col_el.find("div[name=\"COL-CONTENT-CONTAINER\"]");
@@ -72,6 +96,15 @@
 		    
 		});
 		
+        function addRowOverButton(el) {
+            mm = el;
+            var target_el = $(el).parent().parent().parent().find("div[name=\"COL-CONTENT-CONTAINER\"]");
+            var new_row = jQuery().bsGridEngineer.addNewRow(target_el);
+            var new_col = jQuery().bsGridEngineer.addNewCol(new_row);
+            jQuery().bsGridEngineer.setColContent(new_col);
+
+            return;
+        }
     </script>
     
     <style>
@@ -97,8 +130,8 @@
 </div>    
     
 <!-- SOURCE-ROW-BLOCK -->
-
     <div class="container-fluid p-1 d-none" id="SOURCE-ROW-BLOCK">
+        <div class="container-fluid">
         <div class="row border border-secondary border-bottom-0" style="background-color: #f4f4f4; border-color: #999; color: #666;" name="TORPEDO">
             <div class="col-8 p-1">
                 <button type="button" class="btn btn-outline-dark btn-sm" style="font-size: 67%; font-weight: bolder;">
@@ -121,6 +154,7 @@
         </div>
         <div class="row p-1 border border-secondary border-top-0" style="background-color: white; border-color: #999; color: #666;" name="COLS-HOLDER">
         </div>
+        </div>
     </div>
     
 <!-- /SOURCE-ROW-BLOCK -->
@@ -133,7 +167,9 @@
             
 	        <div class="row" style="background-color: #f4f4f4; border-color: #999; color: #666;" name="TORPEDO">
 	            <div class="col-8 p-1">
-	                <button type="button" class="btn btn-outline-dark btn-sm" style="font-size: 67%; font-weight: bolder;">
+	                <button type="button" class="btn btn-outline-dark btn-sm" style="font-size: 67%; font-weight: bolder;"
+                        onclick="addRowOverButton(this)"
+                    >
 	                    <div class="container-fluid">
 	                        <div class="row">
 	                            <div class="col"><span style="font-size: 120%;">+</span> row</div>
