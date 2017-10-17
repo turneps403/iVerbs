@@ -34,18 +34,42 @@
             $.fn.bsGridEngineer.addNewRow = (target, source_row_container) => {
                 // console.log("start addNewRow");
                 var row_el = $( $(source_row_container || $.fn.bsGridEngineer.defaults["id-row-html"]).html() );
+
+                // add unique row rel attribute
+                var rel_id = (new Date().getTime() + '.Rrnd' + Math.floor(Math.random() * 1000));
+                row_el.find('[name^="SRB"]').each((i,e) => {
+                    $(e).attr("rel", rel_id);
+                });
+                row_el.attr("rel", rel_id);
+
+
                 // var uniq_id = (new Date().getTime() + '.rnd' + Math.floor(Math.random() * 1000));
-                // row_el.filter("div[name=\"COLS-HOLDER\"]").attr("id", uniq_id);
+                // row_el.filter("div[name=\"SRB-CONTENT\"]").attr("id", uniq_id);
                 // row_el.removeClass("d-none");
                 $(target).append(row_el);
-                return row_el.find("div[name=\"COLS-HOLDER\"]");
+                return row_el.find("div[name=\"SRB-CONTENT\"][rel=\""+rel_id+"\"]");
             };
 
             $.fn.bsGridEngineer.addNewCol = (target, source_col_container) => {
                 var col_el = $( $(source_col_container || $.fn.bsGridEngineer.defaults["id-col-html"]).html() );
+
+                // add unique col rel attribute
+                var rel_id = (new Date().getTime() + '.Crnd' + Math.floor(Math.random() * 1000));
+                col_el.find('[name^="SCB"]').each((i,e) => {
+                    $(e).attr("rel", rel_id);
+                });
+                col_el.attr("rel", rel_id);
+
+                var rel_target = $(target).attr("rel");
+                if (rel_target) {
+                    col_el.find('[name="SCB-PARENT-ROW"]').each((i,e) => {
+                        $(e).attr("alt", rel_target);
+                    });
+                }
+
                 // col_el.removeClass("d-none");
                 $(target).append(col_el);
-                return col_el.find("div[name=\"COL-CONTENT-CONTAINER\"]");
+                return col_el.find("div[name=\"SCB-CONTENT\"][rel=\""+rel_id+"\"]");
             };
 
             $.fn.bsGridEngineer.setColContent = (col) => {
@@ -56,25 +80,7 @@
 		    $.fn.bsGridEngineer.defaults = {
 		        "id-main-canvas": "#BS-MAIN-CANVAS",
 		        "id-row-html": "#SOURCE-ROW-BLOCK",
-		        "id-col-html": "#SOURCE-COL-BLOCK",
-                "addNewRow" : (target, source_row_container) => {
-                    var row_el = $( $(source_row_container || $.fn.bsGridEngineer.defaults["id-row-html"]).html() );
-                    // var uniq_id = (new Date().getTime() + '.rnd' + Math.floor(Math.random() * 1000));
-                    // row_el.filter("div[name=\"COLS-HOLDER\"]").attr("id", uniq_id);
-                    // row_el.removeClass("d-none");
-                    $(target).append(row_el);
-                    return row_el.filter("div[name=\"COLS-HOLDER\"]");
-                },
-                "addNewCol" : (target, source_col_container) => {
-                    var col_el = $( $(source_col_container || $.fn.bsGridEngineer.defaults["id-col-html"]).html() );
-                    // col_el.removeClass("d-none");
-                    $(target).append(col_el);
-                    return col_el.find("div[name=\"COL-CONTENT-CONTAINER\"]");
-                },
-                "setColContent": (col) => {
-                    $(col).append($("#COL-DEFAULT-CONTENT").html());
-                    return;
-                }
+		        "id-col-html": "#SOURCE-COL-BLOCK"
 		    };
 		    
 		    function debug() {
@@ -97,8 +103,8 @@
 		});
 		
         function addRowOverButton(el) {
-            mm = el;
-            var target_el = $(el).parent().parent().parent().find("div[name=\"COL-CONTENT-CONTAINER\"]");
+            console.log("===", el);
+            var target_el = $(el);
             var new_row = jQuery().bsGridEngineer.addNewRow(target_el);
             var new_col = jQuery().bsGridEngineer.addNewCol(new_row);
             jQuery().bsGridEngineer.setColContent(new_col);
@@ -116,7 +122,9 @@
 	<h3>
         &#8801; bsGridEngineer
         <small class="text-muted">very simple editor for the bootstrap grid system</small>
-        <button type="button" class="btn btn-outline-dark btn-sm" style="font-size: 37%; font-weight: bolder;">
+        <button type="button" class="btn btn-outline-dark btn-sm" style="font-size: 37%; font-weight: bolder;"
+            onclick='addRowOverButton("#BS-MAIN-CANVAS");' 
+        >
             <div class="container-fluid">
 	            <div class="row">
 	                <div class="col"><span style="font-size: 120%;">+</span> row</div>
@@ -131,29 +139,29 @@
     
 <!-- SOURCE-ROW-BLOCK -->
     <div class="container-fluid p-1 d-none" id="SOURCE-ROW-BLOCK">
-        <div class="container-fluid">
-        <div class="row border border-secondary border-bottom-0" style="background-color: #f4f4f4; border-color: #999; color: #666;" name="TORPEDO">
-            <div class="col-8 p-1">
-                <button type="button" class="btn btn-outline-dark btn-sm" style="font-size: 67%; font-weight: bolder;">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col"><span style="font-size: 120%;">+</span> col</div>
+        <div class="container-fluid" name="SRB">
+            <div class="row border border-secondary border-bottom-0" style="background-color: #f4f4f4; border-color: #999; color: #666;">
+                <div class="col-8 p-1">
+                    <button type="button" class="btn btn-outline-dark btn-sm" style="font-size: 67%; font-weight: bolder;"  name="SRB-ADD-COL">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col"><span style="font-size: 120%;">+</span> col</div>
+                            </div>
                         </div>
-                    </div>
-                </button>
-            </div>
-            <div class="col-4 p-1 text-right">
-                <button type="button" class="btn btn-outline-dark btn-sm" style="font-weight: bolder;">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col">&times;</div>
+                    </button>
+                </div>
+                <div class="col-4 p-1 text-right">
+                    <button type="button" class="btn btn-outline-dark btn-sm" style="font-weight: bolder;" name="SRB-CLOSE">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col">&times;</div>
+                            </div>
                         </div>
-                    </div>
-                </button>
+                    </button>
+                </div>
             </div>
-        </div>
-        <div class="row p-1 border border-secondary border-top-0" style="background-color: white; border-color: #999; color: #666;" name="COLS-HOLDER">
-        </div>
+            <div class="row p-1 border border-secondary border-top-0" style="background-color: white; border-color: #999; color: #666;" name="SRB-CONTENT">
+            </div>
         </div>
     </div>
     
@@ -162,13 +170,12 @@
 <!-- SOURCE-COL-BLOCK -->
 
     <div class="container-fluid p-1 d-none" id="SOURCE-COL-BLOCK">
-        <div class="col-8 border border-secondary" style="background-color: #f4f4f4; border-color: #999; color: #666;">
-            
-            
-	        <div class="row" style="background-color: #f4f4f4; border-color: #999; color: #666;" name="TORPEDO">
+        <div class="col-8 border border-secondary" style="background-color: #f4f4f4; border-color: #999; color: #666;" name="SCB">
+            <div style="display: none;" name="SCB-PARENT-ROW" alt=""></div>
+	        <div class="row" style="background-color: #f4f4f4; border-color: #999; color: #666;">
 	            <div class="col-8 p-1">
-	                <button type="button" class="btn btn-outline-dark btn-sm" style="font-size: 67%; font-weight: bolder;"
-                        onclick="addRowOverButton(this)"
+                    <button type="button" class="btn btn-outline-dark btn-sm" style="font-size: 67%; font-weight: bolder;" name="SCB-ADD-ROW"
+                        onclick='addRowOverButton( $("div[name=\"SCB-CONTENT\"][rel=\""+$(this).attr("rel")+"\"]") )'
                     >
 	                    <div class="container-fluid">
 	                        <div class="row">
@@ -176,14 +183,14 @@
 	                        </div>
 	                    </div>
 	                </button>
-	                <button type="button" class="btn btn-outline-dark btn-sm" style="font-size: 67%; font-weight: bolder;">
+	                <button type="button" class="btn btn-outline-dark btn-sm" style="font-size: 67%; font-weight: bolder;" name="SCB-EXTEND">
 	                    <div class="container-fluid">
 	                        <div class="row">
 	                            <div class="col"><span style="font-size: 120%;">&#8592; &#8594;</span></div>
 	                        </div>
 	                    </div>
 	                </button>
-                    <button type="button" class="btn btn-outline-dark btn-sm" style="font-size: 67%; font-weight: bolder;">
+                    <button type="button" class="btn btn-outline-dark btn-sm" style="font-size: 67%; font-weight: bolder;" name="SCB-SHRINK">
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col"><span style="font-size: 120%;">&#8594;&#8226;&#8592;</span></div>
@@ -192,7 +199,9 @@
                     </button>
 	            </div>
 	            <div class="col-4 p-1 text-right">
-	                <button type="button" class="btn btn-outline-dark btn-sm" style="font-weight: bolder;">
+	                <button type="button" class="btn btn-outline-dark btn-sm" style="font-weight: bolder;" name="SCB-CLOSE"
+                        onclick='$(this).parent().parent().parent().remove(); return false;'
+                    >
 	                    <div class="container-fluid">
 	                        <div class="row">
 	                            <div class="col">&times;</div>
@@ -201,7 +210,7 @@
 	                </button>
 	            </div>
 	        </div>
-	        <div class="row p-1" style="background-color: white; border-color: #999; color: #666;" name="COL-CONTENT-CONTAINER">
+	        <div class="row p-1" style="background-color: white; border-color: #999; color: #666;" name="SCB-CONTENT">
 	        </div>
         </div>
     </div>
