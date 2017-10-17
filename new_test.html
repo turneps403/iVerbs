@@ -61,10 +61,33 @@
                 col_el.attr("rel", rel_id);
 
                 var rel_target = $(target).attr("rel");
-                if (rel_target) {
-                    col_el.find('[name="SCB-PARENT-ROW"]').each((i,e) => {
-                        $(e).attr("alt", rel_target);
+                col_el.attr("alt", rel_target);
+
+                var expect_width = 0; var max_width = 12;
+                $(target).find("div[name=\"SCB\"][alt=\""+rel_target+"\"]").each((i,e) => {
+                    var classList = $(e).attr('class').split(/\s+/);
+                    $.each(classList, (index, class_name) => {
+                        var matches = class_name.match(/^col\-(\d+)$/);
+                        if (matches) {
+                            var sum_len = expect_width + matches[1];
+                            if (sum_len > max_width) {
+                                expect_width = max_width - matches[1];
+                            } else if (sum_len === max_width) {
+                                expect_width = 0;
+                            } else {
+                                expect_width = max_width - sum_len;
+                            }
+                        }
                     });
+
+                    // lets be bigger
+                    if (expect_width !== 0 && expect_width < 2) expect_width = 2; 
+                });
+
+                if (expect_width) {
+                    var default_class = "col-8";
+                    col_el.removeClass(default_class);
+                    col_el.addClass("col-" + expect_width);
                 }
 
                 // col_el.removeClass("d-none");
@@ -103,14 +126,38 @@
 		});
 		
         function addRowOverButton(el) {
-            console.log("===", el);
             var target_el = $(el);
             var new_row = jQuery().bsGridEngineer.addNewRow(target_el);
-            var new_col = jQuery().bsGridEngineer.addNewCol(new_row);
+            addColOverButton(new_row);
+            //var new_col = jQuery().bsGridEngineer.addNewCol(new_row);
+            //jQuery().bsGridEngineer.setColContent(new_col);
+
+            return;
+        }
+
+        function addColOverButton(row) {
+            var row = $(row);
+            var new_col = jQuery().bsGridEngineer.addNewCol(row);
             jQuery().bsGridEngineer.setColContent(new_col);
 
             return;
         }
+
+        function removeColOverButton(col) {
+            var col = $(col);
+            var col_rel = col.attr("rel");
+
+            var row_rel = $("div[name=\"SCB\"][rel=\""+col_rel+"\"]").attr("alt");
+            var all_calls = $("div[name=\"SRB\"][rel=\""+row_rel+"\"]").find("div[name=\"SCB\"][alt=\""+row_rel+"\"]");
+            if (all_calls && all_calls.length > 1) {
+                $("div[name=\"SCB\"][rel=\""+col_rel+"\"]").remove();
+            } else {
+                $("div[name=\"SRB\"][rel=\""+row_rel+"\"]").remove();
+            }
+
+            return;
+        }       
+
     </script>
     
     <style>
@@ -142,7 +189,9 @@
         <div class="container-fluid" name="SRB">
             <div class="row border border-secondary border-bottom-0" style="background-color: #f4f4f4; border-color: #999; color: #666;">
                 <div class="col-8 p-1">
-                    <button type="button" class="btn btn-outline-dark btn-sm" style="font-size: 67%; font-weight: bolder;"  name="SRB-ADD-COL">
+                    <button type="button" class="btn btn-outline-dark btn-sm" style="font-size: 67%; font-weight: bolder;"  name="SRB-ADD-COL"
+                        onclick='addColOverButton( $("div[name=\"SRB-CONTENT\"][rel=\""+$(this).attr("rel")+"\"]") )'
+                    >
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col"><span style="font-size: 120%;">+</span> col</div>
@@ -151,7 +200,9 @@
                     </button>
                 </div>
                 <div class="col-4 p-1 text-right">
-                    <button type="button" class="btn btn-outline-dark btn-sm" style="font-weight: bolder;" name="SRB-CLOSE">
+                    <button type="button" class="btn btn-outline-dark btn-sm" style="font-weight: bolder;" name="SRB-CLOSE"
+                        onclick='$("div[name=\"SRB\"][rel=\""+$(this).attr("rel")+"\"]").remove();'
+                    >
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col">&times;</div>
@@ -200,7 +251,7 @@
 	            </div>
 	            <div class="col-4 p-1 text-right">
 	                <button type="button" class="btn btn-outline-dark btn-sm" style="font-weight: bolder;" name="SCB-CLOSE"
-                        onclick='$(this).parent().parent().parent().remove(); return false;'
+                        onclick='removeColOverButton(this)'
                     >
 	                    <div class="container-fluid">
 	                        <div class="row">
