@@ -158,6 +158,34 @@
             return;
         }       
 
+        function extendColOverButton(col) {
+            var col = $(col);
+            var classList = $(col).attr('class').split(/\s+/);
+            $.each(classList, (index, class_name) => {
+                var matches = class_name.match(/^col\-(\d+)$/);
+                if (matches) {
+                    if (matches[1] < 12) {
+                        col.removeClass(class_name);
+                        col.addClass("col-" + (parseInt(matches[1]) + 1));
+                    }
+                }
+            });
+        }
+
+        function shrinkColOverButton(col) {
+            var col = $(col);
+            var classList = $(col).attr('class').split(/\s+/);
+            $.each(classList, (index, class_name) => {
+                var matches = class_name.match(/^col\-(\d+)$/);
+                if (matches) {
+                    if (matches[1] > 1) {
+                        col.removeClass(class_name);
+                        col.addClass("col-" + (parseInt(matches[1]) - 1));
+                    }
+                }
+            });
+        }
+
     </script>
     
     <style>
@@ -221,7 +249,7 @@
 <!-- SOURCE-COL-BLOCK -->
 
     <div class="container-fluid p-1 d-none" id="SOURCE-COL-BLOCK">
-        <div class="col-8 border border-secondary" style="background-color: #f4f4f4; border-color: #999; color: #666;" name="SCB">
+        <div class="col-8 border border-secondary" style="background-color: white; border-color: #999; color: #666;" name="SCB">
             <div style="display: none;" name="SCB-PARENT-ROW" alt=""></div>
 	        <div class="row" style="background-color: #f4f4f4; border-color: #999; color: #666;">
 	            <div class="col-8 p-1">
@@ -234,14 +262,18 @@
 	                        </div>
 	                    </div>
 	                </button>
-	                <button type="button" class="btn btn-outline-dark btn-sm" style="font-size: 67%; font-weight: bolder;" name="SCB-EXTEND">
+	                <button type="button" class="btn btn-outline-dark btn-sm" style="font-size: 67%; font-weight: bolder;" name="SCB-EXTEND"
+                        onclick='extendColOverButton( $("div[name=\"SCB\"][rel=\""+$(this).attr("rel")+"\"]") )'
+                    >
 	                    <div class="container-fluid">
 	                        <div class="row">
 	                            <div class="col"><span style="font-size: 120%;">&#8592; &#8594;</span></div>
 	                        </div>
 	                    </div>
 	                </button>
-                    <button type="button" class="btn btn-outline-dark btn-sm" style="font-size: 67%; font-weight: bolder;" name="SCB-SHRINK">
+                    <button type="button" class="btn btn-outline-dark btn-sm" style="font-size: 67%; font-weight: bolder;" name="SCB-SHRINK"
+                        onclick='shrinkColOverButton( $("div[name=\"SCB\"][rel=\""+$(this).attr("rel")+"\"]") )' 
+                    >
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col"><span style="font-size: 120%;">&#8594;&#8226;&#8592;</span></div>
