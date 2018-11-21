@@ -1,2 +1,2 @@
 # bsGridEngineer
-very simple editor for the bootstrap grid system
+very simple editor
