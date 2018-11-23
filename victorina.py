@@ -23,26 +23,26 @@ class IrregularVerbs:
 		return iter(iverb) # my little trick
 
 class SimpleTable:
-	def __init__(self, jdata):
-		self.jdata = jdata
+	def __init__(self):
+		self.ascii_table = VerbAsciiTable([])
 
-	def draw(self, row_after=0):
+	def draw(self, verb_dict, row_after=0):
 		data = [
-			
+			list(map(lambda x: verb_dict.get(x).get("verb"), ["infinitive", "past_simple", "past_participle"])),
+			list(map(lambda x: verb_dict.get(x).get("ipa"), ["infinitive", "past_simple", "past_participle"]))
 		]
-		table = VerbAsciiTable(self.jdata)
-		table.replace_draw(row_after)
+		self.ascii_table.table_data = data
+		self.ascii_table.replace_draw(row_after)
 
 #"""
 if __name__=='__main__':
 	import sys
 	print("hello")
 
-	SimpleTable()
-
-	sys.exit()
-	for ee in iter(SimpleVerbTables()):
-		print(ee["infinitive"]["verb"])
+	stable = SimpleTable()
+	for verb in iter(IrregularVerbs()):
+		stable.draw(verb)
+		GetLine.await_for_enter({" ": {"break": 1}, "\x1b[C": {"break": 1}})
 	
 	sys.exit()
 	data = [
