@@ -2,7 +2,7 @@ import os,sys,tty,termios
 import select as watcher
 import curses.ascii as keycode
 
-class _GetKey:
+class GetKey:
 	@classmethod
 	def await_tap(cls):
 		fd = sys.stdin.fileno()
@@ -23,13 +23,13 @@ class _GetKey:
 			termios.tcsetattr(fd, termios.TCSADRAIN, cur_settings)
 		return ch
 
-class _GetLine:
+class GetLine:
 	@classmethod
 	def await_for_enter(cls, tap_action=None):
 		right_position = 0
 		term_line = ''
 		while True:
-			tap_key = _GetKey.await_tap()
+			tap_key = GetKey.await_tap()
 			if not tap_key.isprintable():
 				if tap_key == '\x1b[D':
 					# left arrow
@@ -76,37 +76,5 @@ class _GetLine:
 			
 		return term_line
 
-
-def get():
-	inkey = _Getch()
-	while(1):
-		k=inkey()
-		if k != '':
-			break
-	if k=='\x1b[A':
-		print("up")
-	elif k=='\x1b[B':
-		print("down")
-	elif k=='\x1b[C':
-		print("right")
-	elif k=='\x1b[D':
-		print("left")
-	else:
-		if k.isprintable():
-			sys.stdout.write(k + '*')
-			sys.stdout.flush()
-			#print(k)
-		else:
-			#print("not printable: "+str(ord(k)))
-			print("not printable: "+k)
-		#print("not an arrow key!")
-		#print(k + "*")
-
-def main():
-	_GetLine.await_for_enter()
-	#for i in range(0,10):
-	#	get()
-	#	#ee = input("sss:")
-
 if __name__=='__main__':
-        main()
+	GetLine.await_for_enter()
