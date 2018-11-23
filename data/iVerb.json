@@ -1,0 +1,1557 @@
+[
+   {
+      "past_participle" : {
+         "ipa" : "'bi:tn",
+         "verb" : "beaten"
+      },
+      "past_simple" : {
+         "verb" : "beat",
+         "ipa" : "bi:t"
+      },
+      "infinitive" : {
+         "verb" : "beat",
+         "ipa" : "bi:t"
+      }
+   },
+   {
+      "past_simple" : {
+         "ipa" : "bɪ'keɪm",
+         "verb" : "became"
+      },
+      "infinitive" : {
+         "verb" : "become",
+         "ipa" : "bɪ'kʌm"
+      },
+      "past_participle" : {
+         "ipa" : "bɪ'kʌm",
+         "verb" : "become"
+      }
+   },
+   {
+      "infinitive" : {
+         "ipa" : "bɪ'gɪn",
+         "verb" : "begin"
+      },
+      "past_simple" : {
+         "verb" : "began",
+         "ipa" : "bɪ'gæn"
+      },
+      "past_participle" : {
+         "verb" : "begun",
+         "ipa" : "bɪ'gʌn"
+      }
+   },
+   {
+      "past_simple" : {
+         "ipa" : "bent",
+         "verb" : "bent"
+      },
+      "infinitive" : {
+         "ipa" : "bend",
+         "verb" : "bend"
+      },
+      "past_participle" : {
+         "ipa" : "bent",
+         "verb" : "bent"
+      }
+   },
+   {
+      "past_participle" : {
+         "verb" : "bound",
+         "ipa" : "baʊnd"
+      },
+      "past_simple" : {
+         "ipa" : "baʊnd",
+         "verb" : "bound"
+      },
+      "infinitive" : {
+         "verb" : "bind",
+         "ipa" : "baɪnd"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "'bɪtn",
+         "verb" : "bitten"
+      },
+      "past_simple" : {
+         "ipa" : "bɪt",
+         "verb" : "bit"
+      },
+      "infinitive" : {
+         "verb" : "bite",
+         "ipa" : "baɪt"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "bled",
+         "verb" : "bled"
+      },
+      "past_simple" : {
+         "ipa" : "bled",
+         "verb" : "bled"
+      },
+      "infinitive" : {
+         "ipa" : "bli:d",
+         "verb" : "bleed"
+      }
+   },
+   {
+      "past_participle" : {
+         "verb" : "blown",
+         "ipa" : "bloun"
+      },
+      "past_simple" : {
+         "ipa" : "blu:",
+         "verb" : "blew"
+      },
+      "infinitive" : {
+         "verb" : "blow",
+         "ipa" : "blou"
+      }
+   },
+   {
+      "past_participle" : {
+         "verb" : "broken",
+         "ipa" : "'broukən"
+      },
+      "past_simple" : {
+         "verb" : "broke",
+         "ipa" : "brouk"
+      },
+      "infinitive" : {
+         "verb" : "break",
+         "ipa" : "breɪk"
+      }
+   },
+   {
+      "infinitive" : {
+         "verb" : "bring",
+         "ipa" : "brɪŋ"
+      },
+      "past_simple" : {
+         "ipa" : "brɔ:t",
+         "verb" : "brought"
+      },
+      "past_participle" : {
+         "verb" : "brought",
+         "ipa" : "brɔ:t"
+      }
+   },
+   {
+      "past_simple" : {
+         "verb" : "built",
+         "ipa" : "bɪlt"
+      },
+      "infinitive" : {
+         "ipa" : "bɪld",
+         "verb" : "build"
+      },
+      "past_participle" : {
+         "ipa" : "bɪlt",
+         "verb" : "built"
+      }
+   },
+   {
+      "past_simple" : {
+         "ipa" : "bɜ:rnt",
+         "verb" : "burnt"
+      },
+      "infinitive" : {
+         "verb" : "burn",
+         "ipa" : "bɜ:rn"
+      },
+      "past_participle" : {
+         "ipa" : "bɜ:rnt",
+         "verb" : "burnt"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "bɜ:rnd",
+         "verb" : "burned"
+      },
+      "infinitive" : {
+         "verb" : "burn",
+         "ipa" : "bɜ:rn"
+      },
+      "past_simple" : {
+         "verb" : "burned",
+         "ipa" : "bɜ:rnd"
+      }
+   },
+   {
+      "past_participle" : {
+         "verb" : "bought",
+         "ipa" : "bɔ:t"
+      },
+      "infinitive" : {
+         "ipa" : "baɪ",
+         "verb" : "buy"
+      },
+      "past_simple" : {
+         "verb" : "bought",
+         "ipa" : "bɔ:t"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "kɔ:t",
+         "verb" : "caught"
+      },
+      "infinitive" : {
+         "ipa" : "kætʃ",
+         "verb" : "catch"
+      },
+      "past_simple" : {
+         "ipa" : "kɔ:t",
+         "verb" : "caught"
+      }
+   },
+   {
+      "past_participle" : {
+         "verb" : "chosen",
+         "ipa" : "'tʃouzən"
+      },
+      "infinitive" : {
+         "ipa" : "tʃu:z",
+         "verb" : "choose"
+      },
+      "past_simple" : {
+         "ipa" : "tʃouz",
+         "verb" : "chose"
+      }
+   },
+   {
+      "past_simple" : {
+         "verb" : "came",
+         "ipa" : "keɪm"
+      },
+      "infinitive" : {
+         "verb" : "come",
+         "ipa" : "kʌm"
+      },
+      "past_participle" : {
+         "verb" : "come",
+         "ipa" : "kʌm"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "kɒst",
+         "verb" : "cost"
+      },
+      "infinitive" : {
+         "ipa" : "kɒst",
+         "verb" : "cost"
+      },
+      "past_simple" : {
+         "verb" : "cost",
+         "ipa" : "kɒst"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "kʌt",
+         "verb" : "cut"
+      },
+      "past_simple" : {
+         "ipa" : "kʌt",
+         "verb" : "cut"
+      },
+      "infinitive" : {
+         "verb" : "cut",
+         "ipa" : "kʌt"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "dʌg",
+         "verb" : "dug"
+      },
+      "infinitive" : {
+         "ipa" : "dɪg",
+         "verb" : "dig"
+      },
+      "past_simple" : {
+         "ipa" : "dʌg",
+         "verb" : "dug"
+      }
+   },
+   {
+      "infinitive" : {
+         "verb" : "do",
+         "ipa" : "du:"
+      },
+      "past_simple" : {
+         "ipa" : "dɪd",
+         "verb" : "did"
+      },
+      "past_participle" : {
+         "verb" : "done",
+         "ipa" : "dʌn"
+      }
+   },
+   {
+      "past_participle" : {
+         "verb" : "drawn",
+         "ipa" : "drɔ:n"
+      },
+      "past_simple" : {
+         "verb" : "drew",
+         "ipa" : "dru:"
+      },
+      "infinitive" : {
+         "verb" : "draw",
+         "ipa" : "drɔ:"
+      }
+   },
+   {
+      "past_simple" : {
+         "ipa" : "dremt",
+         "verb" : "dreamt"
+      },
+      "infinitive" : {
+         "verb" : "dream",
+         "ipa" : "dri:m"
+      },
+      "past_participle" : {
+         "ipa" : "dremt",
+         "verb" : "dreamt"
+      }
+   },
+   {
+      "past_simple" : {
+         "ipa" : "dri:md",
+         "verb" : "dreamed"
+      },
+      "infinitive" : {
+         "ipa" : "dri:m",
+         "verb" : "dream"
+      },
+      "past_participle" : {
+         "verb" : "dreamed",
+         "ipa" : "dri:md"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "drʌŋk",
+         "verb" : "drunk"
+      },
+      "past_simple" : {
+         "verb" : "drank",
+         "ipa" : "dræŋk"
+      },
+      "infinitive" : {
+         "verb" : "drink",
+         "ipa" : "drɪŋk"
+      }
+   },
+   {
+      "past_simple" : {
+         "verb" : "drove",
+         "ipa" : "drouv"
+      },
+      "infinitive" : {
+         "ipa" : "draɪv",
+         "verb" : "drive"
+      },
+      "past_participle" : {
+         "ipa" : "'drɪvən",
+         "verb" : "driven"
+      }
+   },
+   {
+      "infinitive" : {
+         "ipa" : "i:t",
+         "verb" : "eat"
+      },
+      "past_simple" : {
+         "verb" : "ate",
+         "ipa" : "eɪt,et"
+      },
+      "past_participle" : {
+         "ipa" : "'i:tn",
+         "verb" : "eaten"
+      }
+   },
+   {
+      "past_participle" : {
+         "verb" : "fallen",
+         "ipa" : "'fɔ:lən"
+      },
+      "infinitive" : {
+         "verb" : "fall",
+         "ipa" : "fɔ:l"
+      },
+      "past_simple" : {
+         "ipa" : "fel",
+         "verb" : "fell"
+      }
+   },
+   {
+      "past_participle" : {
+         "verb" : "fed",
+         "ipa" : "fed"
+      },
+      "past_simple" : {
+         "ipa" : "fed",
+         "verb" : "fed"
+      },
+      "infinitive" : {
+         "verb" : "feed",
+         "ipa" : "fi:d"
+      }
+   },
+   {
+      "past_simple" : {
+         "ipa" : "felt",
+         "verb" : "felt"
+      },
+      "infinitive" : {
+         "verb" : "feel",
+         "ipa" : "fi:l"
+      },
+      "past_participle" : {
+         "verb" : "felt",
+         "ipa" : "felt"
+      }
+   },
+   {
+      "past_simple" : {
+         "ipa" : "fɔ:t",
+         "verb" : "fought"
+      },
+      "infinitive" : {
+         "ipa" : "faɪt",
+         "verb" : "fight"
+      },
+      "past_participle" : {
+         "ipa" : "fɔ:t",
+         "verb" : "fought"
+      }
+   },
+   {
+      "past_participle" : {
+         "verb" : "found",
+         "ipa" : "faʊnd"
+      },
+      "past_simple" : {
+         "ipa" : "faʊnd",
+         "verb" : "found"
+      },
+      "infinitive" : {
+         "ipa" : "faɪnd",
+         "verb" : "find"
+      }
+   },
+   {
+      "infinitive" : {
+         "ipa" : "flaɪ",
+         "verb" : "fly"
+      },
+      "past_simple" : {
+         "verb" : "flew",
+         "ipa" : "flu:"
+      },
+      "past_participle" : {
+         "ipa" : "floun",
+         "verb" : "flown"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "fər'gɒtn",
+         "verb" : "forgotten"
+      },
+      "infinitive" : {
+         "verb" : "forget",
+         "ipa" : "fər'get"
+      },
+      "past_simple" : {
+         "verb" : "forgot",
+         "ipa" : "fər'gɒt"
+      }
+   },
+   {
+      "past_simple" : {
+         "ipa" : "fər'geɪv",
+         "verb" : "forgave"
+      },
+      "infinitive" : {
+         "verb" : "forgive",
+         "ipa" : "fər'gɪv"
+      },
+      "past_participle" : {
+         "ipa" : "fər'gɪvən",
+         "verb" : "forgiven"
+      }
+   },
+   {
+      "past_simple" : {
+         "verb" : "froze",
+         "ipa" : "frouz"
+      },
+      "infinitive" : {
+         "ipa" : "fri:z",
+         "verb" : "freeze"
+      },
+      "past_participle" : {
+         "ipa" : "'frouzən",
+         "verb" : "frozen"
+      }
+   },
+   {
+      "infinitive" : {
+         "verb" : "get",
+         "ipa" : "get"
+      },
+      "past_simple" : {
+         "ipa" : "gɒt",
+         "verb" : "got"
+      },
+      "past_participle" : {
+         "ipa" : "gɒt",
+         "verb" : "got"
+      }
+   },
+   {
+      "past_simple" : {
+         "verb" : "got",
+         "ipa" : "gɒt"
+      },
+      "infinitive" : {
+         "ipa" : "get",
+         "verb" : "get"
+      },
+      "past_participle" : {
+         "verb" : "gotten",
+         "ipa" : "'gɒtn"
+      }
+   },
+   {
+      "past_participle" : {
+         "verb" : "given",
+         "ipa" : "'gɪvən"
+      },
+      "past_simple" : {
+         "ipa" : "geɪv",
+         "verb" : "gave"
+      },
+      "infinitive" : {
+         "verb" : "give",
+         "ipa" : "gɪv"
+      }
+   },
+   {
+      "infinitive" : {
+         "verb" : "go",
+         "ipa" : "gou"
+      },
+      "past_simple" : {
+         "ipa" : "went",
+         "verb" : "went"
+      },
+      "past_participle" : {
+         "ipa" : "gɒn",
+         "verb" : "gone"
+      }
+   },
+   {
+      "past_simple" : {
+         "verb" : "grew",
+         "ipa" : "gru:"
+      },
+      "infinitive" : {
+         "verb" : "grow",
+         "ipa" : "grou"
+      },
+      "past_participle" : {
+         "verb" : "grown",
+         "ipa" : "groun"
+      }
+   },
+   {
+      "past_simple" : {
+         "ipa" : "hʌŋ",
+         "verb" : "hung"
+      },
+      "infinitive" : {
+         "ipa" : "hæŋ",
+         "verb" : "hang"
+      },
+      "past_participle" : {
+         "ipa" : "hʌŋ",
+         "verb" : "hung"
+      }
+   },
+   {
+      "past_simple" : {
+         "ipa" : "hæd",
+         "verb" : "had"
+      },
+      "infinitive" : {
+         "ipa" : "hæv",
+         "verb" : "have"
+      },
+      "past_participle" : {
+         "verb" : "had",
+         "ipa" : "hæd"
+      }
+   },
+   {
+      "past_participle" : {
+         "verb" : "heard",
+         "ipa" : "hɜ:rd"
+      },
+      "past_simple" : {
+         "verb" : "heard",
+         "ipa" : "hɜ:rd"
+      },
+      "infinitive" : {
+         "verb" : "hear",
+         "ipa" : "hɪər"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "'hɪdn",
+         "verb" : "hidden"
+      },
+      "infinitive" : {
+         "ipa" : "haɪd",
+         "verb" : "hide"
+      },
+      "past_simple" : {
+         "ipa" : "hɪd",
+         "verb" : "hid"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "hɪt",
+         "verb" : "hit"
+      },
+      "past_simple" : {
+         "ipa" : "hɪt",
+         "verb" : "hit"
+      },
+      "infinitive" : {
+         "verb" : "hit",
+         "ipa" : "hɪt"
+      }
+   },
+   {
+      "past_simple" : {
+         "verb" : "held",
+         "ipa" : "held"
+      },
+      "infinitive" : {
+         "verb" : "hold",
+         "ipa" : "hould"
+      },
+      "past_participle" : {
+         "verb" : "held",
+         "ipa" : "held"
+      }
+   },
+   {
+      "past_simple" : {
+         "ipa" : "hɜ:rt",
+         "verb" : "hurt"
+      },
+      "infinitive" : {
+         "verb" : "hurt",
+         "ipa" : "hɜ:rt"
+      },
+      "past_participle" : {
+         "ipa" : "hɜ:rt",
+         "verb" : "hurt"
+      }
+   },
+   {
+      "past_participle" : {
+         "verb" : "kept",
+         "ipa" : "kept"
+      },
+      "infinitive" : {
+         "verb" : "keep",
+         "ipa" : "ki:p"
+      },
+      "past_simple" : {
+         "ipa" : "kept",
+         "verb" : "kept"
+      }
+   },
+   {
+      "infinitive" : {
+         "verb" : "know",
+         "ipa" : "nou"
+      },
+      "past_simple" : {
+         "ipa" : "nu:",
+         "verb" : "knew"
+      },
+      "past_participle" : {
+         "ipa" : "noun",
+         "verb" : "known"
+      }
+   },
+   {
+      "infinitive" : {
+         "ipa" : "leɪ",
+         "verb" : "lay"
+      },
+      "past_simple" : {
+         "verb" : "laid",
+         "ipa" : "leɪd"
+      },
+      "past_participle" : {
+         "ipa" : "leɪd",
+         "verb" : "laid"
+      }
+   },
+   {
+      "infinitive" : {
+         "ipa" : "li:d",
+         "verb" : "lead"
+      },
+      "past_simple" : {
+         "ipa" : "led",
+         "verb" : "led"
+      },
+      "past_participle" : {
+         "ipa" : "led",
+         "verb" : "led"
+      }
+   },
+   {
+      "past_simple" : {
+         "ipa" : "lɜ:rnt",
+         "verb" : "learnt"
+      },
+      "infinitive" : {
+         "ipa" : "lɜ:rn",
+         "verb" : "learn"
+      },
+      "past_participle" : {
+         "ipa" : "lɜ:rnt",
+         "verb" : "learnt"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "lɜ:rnd",
+         "verb" : "learned"
+      },
+      "infinitive" : {
+         "ipa" : "lɜ:rn",
+         "verb" : "learn"
+      },
+      "past_simple" : {
+         "verb" : "learned",
+         "ipa" : "lɜ:rnd"
+      }
+   },
+   {
+      "past_simple" : {
+         "ipa" : "left",
+         "verb" : "left"
+      },
+      "infinitive" : {
+         "verb" : "leave",
+         "ipa" : "li:v"
+      },
+      "past_participle" : {
+         "verb" : "left",
+         "ipa" : "left"
+      }
+   },
+   {
+      "past_participle" : {
+         "verb" : "lent",
+         "ipa" : "lent"
+      },
+      "infinitive" : {
+         "ipa" : "lend",
+         "verb" : "lend"
+      },
+      "past_simple" : {
+         "verb" : "lent",
+         "ipa" : "lent"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "let",
+         "verb" : "let"
+      },
+      "infinitive" : {
+         "ipa" : "let",
+         "verb" : "let"
+      },
+      "past_simple" : {
+         "ipa" : "let",
+         "verb" : "let"
+      }
+   },
+   {
+      "infinitive" : {
+         "ipa" : "laɪ",
+         "verb" : "lie"
+      },
+      "past_simple" : {
+         "verb" : "lay",
+         "ipa" : "leɪ"
+      },
+      "past_participle" : {
+         "verb" : "lain",
+         "ipa" : "leɪn"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "lɒst",
+         "verb" : "lost"
+      },
+      "infinitive" : {
+         "verb" : "lose",
+         "ipa" : "lu:z"
+      },
+      "past_simple" : {
+         "verb" : "lost",
+         "ipa" : "lɒst"
+      }
+   },
+   {
+      "infinitive" : {
+         "verb" : "make",
+         "ipa" : "meɪk"
+      },
+      "past_simple" : {
+         "ipa" : "meɪd",
+         "verb" : "made"
+      },
+      "past_participle" : {
+         "ipa" : "meɪd",
+         "verb" : "made"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "ment",
+         "verb" : "meant"
+      },
+      "infinitive" : {
+         "ipa" : "mi:n",
+         "verb" : "mean"
+      },
+      "past_simple" : {
+         "verb" : "meant",
+         "ipa" : "ment"
+      }
+   },
+   {
+      "past_simple" : {
+         "ipa" : "met",
+         "verb" : "met"
+      },
+      "infinitive" : {
+         "verb" : "meet",
+         "ipa" : "mi:t"
+      },
+      "past_participle" : {
+         "ipa" : "met",
+         "verb" : "met"
+      }
+   },
+   {
+      "past_participle" : {
+         "verb" : "paid",
+         "ipa" : "peɪd"
+      },
+      "past_simple" : {
+         "verb" : "paid",
+         "ipa" : "peɪd"
+      },
+      "infinitive" : {
+         "ipa" : "peɪ",
+         "verb" : "pay"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "pʊt",
+         "verb" : "put"
+      },
+      "infinitive" : {
+         "verb" : "put",
+         "ipa" : "pʊt"
+      },
+      "past_simple" : {
+         "ipa" : "pʊt",
+         "verb" : "put"
+      }
+   },
+   {
+      "past_participle" : {
+         "verb" : "read",
+         "ipa" : "red"
+      },
+      "infinitive" : {
+         "ipa" : "ri:d",
+         "verb" : "read"
+      },
+      "past_simple" : {
+         "verb" : "read",
+         "ipa" : "red"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "'rɪdn",
+         "verb" : "ridden"
+      },
+      "past_simple" : {
+         "verb" : "rode",
+         "ipa" : "roud"
+      },
+      "infinitive" : {
+         "verb" : "ride",
+         "ipa" : "raɪd"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "rʌŋ",
+         "verb" : "rung"
+      },
+      "past_simple" : {
+         "ipa" : "ræŋ",
+         "verb" : "rang"
+      },
+      "infinitive" : {
+         "ipa" : "rɪŋ",
+         "verb" : "ring"
+      }
+   },
+   {
+      "infinitive" : {
+         "verb" : "rise",
+         "ipa" : "raɪz"
+      },
+      "past_simple" : {
+         "verb" : "rose",
+         "ipa" : "rouz"
+      },
+      "past_participle" : {
+         "ipa" : "'rɪzən",
+         "verb" : "risen"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "rʌn",
+         "verb" : "run"
+      },
+      "past_simple" : {
+         "ipa" : "ræn",
+         "verb" : "ran"
+      },
+      "infinitive" : {
+         "ipa" : "rʌn",
+         "verb" : "run"
+      }
+   },
+   {
+      "past_participle" : {
+         "verb" : "said",
+         "ipa" : "sed"
+      },
+      "past_simple" : {
+         "ipa" : "sed",
+         "verb" : "said"
+      },
+      "infinitive" : {
+         "ipa" : "seɪ",
+         "verb" : "say"
+      }
+   },
+   {
+      "past_simple" : {
+         "ipa" : "sɔ:",
+         "verb" : "saw"
+      },
+      "infinitive" : {
+         "ipa" : "si:",
+         "verb" : "see"
+      },
+      "past_participle" : {
+         "verb" : "seen",
+         "ipa" : "si:n"
+      }
+   },
+   {
+      "past_simple" : {
+         "verb" : "sold",
+         "ipa" : "sould"
+      },
+      "infinitive" : {
+         "ipa" : "sel",
+         "verb" : "sell"
+      },
+      "past_participle" : {
+         "verb" : "sold",
+         "ipa" : "sould"
+      }
+   },
+   {
+      "past_simple" : {
+         "ipa" : "sent",
+         "verb" : "sent"
+      },
+      "infinitive" : {
+         "ipa" : "send",
+         "verb" : "send"
+      },
+      "past_participle" : {
+         "verb" : "sent",
+         "ipa" : "sent"
+      }
+   },
+   {
+      "infinitive" : {
+         "verb" : "set",
+         "ipa" : "set"
+      },
+      "past_simple" : {
+         "verb" : "set",
+         "ipa" : "set"
+      },
+      "past_participle" : {
+         "verb" : "set",
+         "ipa" : "set"
+      }
+   },
+   {
+      "past_participle" : {
+         "verb" : "shaken",
+         "ipa" : "'ʃeɪkən"
+      },
+      "past_simple" : {
+         "ipa" : "ʃʊk",
+         "verb" : "shook"
+      },
+      "infinitive" : {
+         "ipa" : "ʃeɪk",
+         "verb" : "shake"
+      }
+   },
+   {
+      "infinitive" : {
+         "verb" : "shine",
+         "ipa" : "ʃaɪn"
+      },
+      "past_simple" : {
+         "ipa" : "ʃoun,ʃɒn",
+         "verb" : "shone"
+      },
+      "past_participle" : {
+         "ipa" : "ʃoun,ʃɒn",
+         "verb" : "shone"
+      }
+   },
+   {
+      "infinitive" : {
+         "ipa" : "ʃu:t",
+         "verb" : "shoot"
+      },
+      "past_simple" : {
+         "ipa" : "ʃɒt",
+         "verb" : "shot"
+      },
+      "past_participle" : {
+         "verb" : "shot",
+         "ipa" : "ʃɒt"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "ʃoun",
+         "verb" : "shown"
+      },
+      "infinitive" : {
+         "verb" : "show",
+         "ipa" : "ʃou"
+      },
+      "past_simple" : {
+         "ipa" : "ʃoud",
+         "verb" : "showed"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "ʃʌt",
+         "verb" : "shut"
+      },
+      "infinitive" : {
+         "verb" : "shut",
+         "ipa" : "ʃʌt"
+      },
+      "past_simple" : {
+         "verb" : "shut",
+         "ipa" : "ʃʌt"
+      }
+   },
+   {
+      "past_simple" : {
+         "verb" : "sang",
+         "ipa" : "sæŋ"
+      },
+      "infinitive" : {
+         "ipa" : "sɪŋ",
+         "verb" : "sing"
+      },
+      "past_participle" : {
+         "verb" : "sung",
+         "ipa" : "sʌŋ"
+      }
+   },
+   {
+      "past_participle" : {
+         "verb" : "sunk",
+         "ipa" : "sʌŋk"
+      },
+      "infinitive" : {
+         "verb" : "sink",
+         "ipa" : "sɪŋk"
+      },
+      "past_simple" : {
+         "ipa" : "sæŋk",
+         "verb" : "sank"
+      }
+   },
+   {
+      "past_participle" : {
+         "verb" : "sat",
+         "ipa" : "sæt"
+      },
+      "infinitive" : {
+         "verb" : "sit",
+         "ipa" : "sɪt"
+      },
+      "past_simple" : {
+         "verb" : "sat",
+         "ipa" : "sæt"
+      }
+   },
+   {
+      "past_simple" : {
+         "verb" : "slept",
+         "ipa" : "slept"
+      },
+      "infinitive" : {
+         "ipa" : "sli:p",
+         "verb" : "sleep"
+      },
+      "past_participle" : {
+         "ipa" : "slept",
+         "verb" : "slept"
+      }
+   },
+   {
+      "infinitive" : {
+         "ipa" : "smel",
+         "verb" : "smell"
+      },
+      "past_simple" : {
+         "verb" : "smelt",
+         "ipa" : "smelt"
+      },
+      "past_participle" : {
+         "verb" : "smelt",
+         "ipa" : "smelt"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "smeld",
+         "verb" : "smelled"
+      },
+      "past_simple" : {
+         "verb" : "smelled",
+         "ipa" : "smeld"
+      },
+      "infinitive" : {
+         "verb" : "smell",
+         "ipa" : "smel"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "'spoukən",
+         "verb" : "spoken"
+      },
+      "infinitive" : {
+         "ipa" : "spi:k",
+         "verb" : "speak"
+      },
+      "past_simple" : {
+         "verb" : "spoke",
+         "ipa" : "spouk"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "spelt",
+         "verb" : "spelt"
+      },
+      "infinitive" : {
+         "verb" : "spell",
+         "ipa" : "spel"
+      },
+      "past_simple" : {
+         "verb" : "spelt",
+         "ipa" : "spelt"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "speld",
+         "verb" : "spelled"
+      },
+      "past_simple" : {
+         "verb" : "spelled",
+         "ipa" : "speld"
+      },
+      "infinitive" : {
+         "ipa" : "spel",
+         "verb" : "spell"
+      }
+   },
+   {
+      "past_simple" : {
+         "ipa" : "spent",
+         "verb" : "spent"
+      },
+      "infinitive" : {
+         "verb" : "spend",
+         "ipa" : "spend"
+      },
+      "past_participle" : {
+         "ipa" : "spent",
+         "verb" : "spent"
+      }
+   },
+   {
+      "past_participle" : {
+         "verb" : "spilt",
+         "ipa" : "spɪlt"
+      },
+      "infinitive" : {
+         "verb" : "spill",
+         "ipa" : "spɪl"
+      },
+      "past_simple" : {
+         "verb" : "spilt",
+         "ipa" : "spɪlt"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "spɪld",
+         "verb" : "spilled"
+      },
+      "past_simple" : {
+         "ipa" : "spɪld",
+         "verb" : "spilled"
+      },
+      "infinitive" : {
+         "verb" : "spill",
+         "ipa" : "spɪl"
+      }
+   },
+   {
+      "past_participle" : {
+         "verb" : "spat",
+         "ipa" : "spæt"
+      },
+      "past_simple" : {
+         "ipa" : "spæt",
+         "verb" : "spat"
+      },
+      "infinitive" : {
+         "verb" : "spit",
+         "ipa" : "spɪt"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "spɪt",
+         "verb" : "spit"
+      },
+      "past_simple" : {
+         "ipa" : "spɪt",
+         "verb" : "spit"
+      },
+      "infinitive" : {
+         "ipa" : "spɪt",
+         "verb" : "spit"
+      }
+   },
+   {
+      "infinitive" : {
+         "ipa" : "splɪt",
+         "verb" : "split"
+      },
+      "past_simple" : {
+         "verb" : "split",
+         "ipa" : "splɪt"
+      },
+      "past_participle" : {
+         "ipa" : "splɪt",
+         "verb" : "split"
+      }
+   },
+   {
+      "past_simple" : {
+         "ipa" : "spoɪlt",
+         "verb" : "spoilt"
+      },
+      "infinitive" : {
+         "ipa" : "spoɪl",
+         "verb" : "spoil"
+      },
+      "past_participle" : {
+         "ipa" : "spoɪlt",
+         "verb" : "spoilt"
+      }
+   },
+   {
+      "past_participle" : {
+         "verb" : "spoiled",
+         "ipa" : "spoɪld"
+      },
+      "infinitive" : {
+         "ipa" : "spoɪl",
+         "verb" : "spoil"
+      },
+      "past_simple" : {
+         "verb" : "spoiled",
+         "ipa" : "spoɪld"
+      }
+   },
+   {
+      "infinitive" : {
+         "ipa" : "stænd",
+         "verb" : "stand"
+      },
+      "past_simple" : {
+         "ipa" : "stʊd",
+         "verb" : "stood"
+      },
+      "past_participle" : {
+         "verb" : "stood",
+         "ipa" : "stʊd"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "'stoulən",
+         "verb" : "stolen"
+      },
+      "past_simple" : {
+         "ipa" : "stoul",
+         "verb" : "stole"
+      },
+      "infinitive" : {
+         "verb" : "steal",
+         "ipa" : "sti:l"
+      }
+   },
+   {
+      "infinitive" : {
+         "verb" : "strike",
+         "ipa" : "straɪk"
+      },
+      "past_simple" : {
+         "ipa" : "strʌk",
+         "verb" : "struck"
+      },
+      "past_participle" : {
+         "verb" : "struck",
+         "ipa" : "strʌk"
+      }
+   },
+   {
+      "past_simple" : {
+         "verb" : "swam",
+         "ipa" : "swæm"
+      },
+      "infinitive" : {
+         "ipa" : "swɪm",
+         "verb" : "swim"
+      },
+      "past_participle" : {
+         "ipa" : "swʌm",
+         "verb" : "swum"
+      }
+   },
+   {
+      "past_simple" : {
+         "ipa" : "tʊk",
+         "verb" : "took"
+      },
+      "infinitive" : {
+         "verb" : "take",
+         "ipa" : "teɪk"
+      },
+      "past_participle" : {
+         "verb" : "taken",
+         "ipa" : "'teɪkən"
+      }
+   },
+   {
+      "infinitive" : {
+         "ipa" : "ti:tʃ",
+         "verb" : "teach"
+      },
+      "past_simple" : {
+         "ipa" : "tɔ:t",
+         "verb" : "taught"
+      },
+      "past_participle" : {
+         "verb" : "taught",
+         "ipa" : "tɔ:t"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "tɔrn",
+         "verb" : "torn"
+      },
+      "infinitive" : {
+         "verb" : "tear",
+         "ipa" : "teər"
+      },
+      "past_simple" : {
+         "ipa" : "tɔr",
+         "verb" : "tore"
+      }
+   },
+   {
+      "past_participle" : {
+         "ipa" : "tould",
+         "verb" : "told"
+      },
+      "past_simple" : {
+         "ipa" : "tould",
+         "verb" : "told"
+      },
+      "infinitive" : {
+         "ipa" : "tel",
+         "verb" : "tell"
+      }
+   },
+   {
+      "past_participle" : {
+         "verb" : "thought",
+         "ipa" : "θɔ:t"
+      },
+      "past_simple" : {
+         "ipa" : "θɔ:t",
+         "verb" : "thought"
+      },
+      "infinitive" : {
+         "ipa" : "θɪŋk",
+         "verb" : "think"
+      }
+   },
+   {
+      "infinitive" : {
+         "verb" : "throw",
+         "ipa" : "θrou"
+      },
+      "past_simple" : {
+         "verb" : "threw",
+         "ipa" : "θru:"
+      },
+      "past_participle" : {
+         "ipa" : "θroun",
+         "verb" : "thrown"
+      }
+   },
+   {
+      "infinitive" : {
+         "verb" : "understand",
+         "ipa" : "ʌndər'stænd"
+      },
+      "past_simple" : {
+         "verb" : "understood",
+         "ipa" : "ʌndər'stʊd"
+      },
+      "past_participle" : {
+         "ipa" : "ʌndər'stʊd",
+         "verb" : "understood"
+      }
+   },
+   {
+      "infinitive" : {
+         "ipa" : "weɪk",
+         "verb" : "wake"
+      },
+      "past_simple" : {
+         "verb" : "woke",
+         "ipa" : "wouk"
+      },
+      "past_participle" : {
+         "ipa" : "'woukən",
+         "verb" : "woken"
+      }
+   },
+   {
+      "infinitive" : {
+         "verb" : "wear",
+         "ipa" : "weər"
+      },
+      "past_simple" : {
+         "ipa" : "wɔr",
+         "verb" : "wore"
+      },
+      "past_participle" : {
+         "ipa" : "wɔrn",
+         "verb" : "worn"
+      }
+   },
+   {
+      "infinitive" : {
+         "verb" : "win",
+         "ipa" : "wɪn"
+      },
+      "past_simple" : {
+         "ipa" : "wʌn",
+         "verb" : "won"
+      },
+      "past_participle" : {
+         "ipa" : "wʌn",
+         "verb" : "won"
+      }
+   },
+   {
+      "past_simple" : {
+         "ipa" : "rout",
+         "verb" : "wrote"
+      },
+      "infinitive" : {
+         "verb" : "write",
+         "ipa" : "raɪt"
+      },
+      "past_participle" : {
+         "ipa" : "'rɪtn",
+         "verb" : "written"
+      }
+   }
+]
+
