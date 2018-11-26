@@ -1,6 +1,9 @@
 import os,sys,tty,termios
+import copy
 import select as watcher
 import curses.ascii as keycode
+from colorclass import Color
+from functools import reduce
 
 class GetKey:
 	@classmethod
@@ -76,5 +79,45 @@ class GetLine:
 			
 		return term_line
 
+class HorizontalOptions:
+	def __init__(self, options, sep="    "):
+		self._options = options
+		self._sep = sep
+
+	def choice(self):
+		ind = None 
+		while True:
+			if ind is None:
+				ind = 0
+			else:
+				sys.stdout.write("\033[F\n\033[K")
+			options = copy.deepcopy(self._options)
+			real_ind = ind % len(options)
+			# clean
+			#print("len=" + str(( reduce(lambda a, x: a + len(x), options, 0) + len(self._sep)*(len(options)-1) )))
+			#sys.exit()
+			#sys.stdout.write("\033[K" + " "*( reduce(lambda a, x: a + len(x), options, 0) + len(self._sep)*(len(options)-1) ))
+			options[ real_ind ] = Color('{autobgwhite}'+options[ real_ind ]+'{/bgwhite}')
+			print(self._sep.join(options), end='', flush=True)
+			
+			tap_key = GetKey.await_tap()
+			if tap_key == '\x1b[D':
+				# left arrow
+				ind = len(options) - 1 if ind - 1 < 0 else ind - 1
+				continue
+			elif tap_key == '\x1b[C':
+				# right arrow
+				ind = ind + 1 if ind + 1 < len(options) else 0
+				continue
+			elif ord(tap_key[:1]) in [keycode.CR, ord(" ")]:
+				sys.stdout.write("\n")
+				return (ind % len(options))
+			else:
+				continue
+
+
 if __name__=='__main__':
-	GetLine.await_for_enter()
+	choices = ["foo", "bar", "baz"]
+	opt = HorizontalOptions(choices)
+	print("Your choice is: " + choices[opt.choice()] )
+	#GetLine.await_for_enter()

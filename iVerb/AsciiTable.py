@@ -25,7 +25,6 @@ class VerbAsciiTable(AsciiTable):
 
 if __name__ == "__main__":
 	import time
-	print("hello")
 
 	data = []
 	data.append(['Row one column one', 'Row one column two'])
@@ -33,29 +32,10 @@ if __name__ == "__main__":
 	data.append(['Row three column one', 'Row three column two'])
 	table = VerbAsciiTable(data)
 	table.replace_draw()
-	
-	from colorclass import Color
-	import re
-	user_answer = input("your answer: ")
-	user_answer = re.sub('([0-9a-zA-Z])', lambda x: x.group(0) + '\u0336', user_answer)
-	sys.stdout.write("\033[F\033[K")
-	print("your answer: " + Color('{autogreen}' + user_answer +'{/autogreen}') + " ffffoooo")
-
-"""	
-	data = []
-	data.append(['Row one column one', 'Row one column two'])
-	data.append(['Row two column one', 'Row two column two'])
-	data.append(['Row three column one', 'Row three column two'])
-	#data.append(['Row four column one', 'Row four column two'])
-	
-	table = VerbAsciiTable(data)
-	table.replace_draw()
-	print("end")
 	time.sleep(2)
 	
-	#table.table_data.pop()
 	table.table_data[1][1] = "REPLACED"
-	table.replace_draw(1)
+	table.replace_draw()
 	print("end1")
 	print("end2")
 	print("end3")
@@ -81,6 +61,6 @@ if __name__ == "__main__":
 	
 	table.table_data.pop()
 	table.table_data[1][1] = "REPLACED"
-	print("end")	
+	table.replace_draw(1)
+	print("end")
 	time.sleep(2)
-"""	
