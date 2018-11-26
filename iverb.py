@@ -28,7 +28,7 @@ else:
 		riddle_target = weighted_choice({"infinitive": 10, "past_simple": 40, "past_participle": 25})
 		expected_answer = riddle_verb.get(riddle_target).get("verb")
 		lenght = max([len(riddle_verb.get(riddle_target).get("verb")), len(riddle_verb.get(riddle_target).get("ipa"))])
-		riddle_placeholder = " "*int((lenght - 1)/2) + '?' + " "*int((lenght - 1)/2)
+		riddle_placeholder = " "*(lenght//2) + '?' + " "*(lenght - 1 - (lenght//2))
 		riddle_verb["past_simple"] = {"verb": riddle_placeholder, "ipa": riddle_placeholder}
 		score = victorina.draw(verb, riddle_verb, expected_answer, score)
 
