@@ -2,6 +2,9 @@ import os
 from random import shuffle
 import json
 import copy
+import time
+import re
+from colorclass import Color
 
 from AsciiTable import VerbAsciiTable
 from Term import GetLine
@@ -34,15 +37,60 @@ class SimpleTable:
 		self.ascii_table.table_data = data
 		self.ascii_table.replace_draw(row_after)
 
+class Victorina(SimpleTable):
+	def __init__(self, *args, **kwargs):
+		super(Victorina, self).__init__(*args, **kwargs)
+		self.sleep_after_right_answer = kwargs.get("sleep_after_right_answer", 2)
+		self.sleep_after_wrong_answer = kwargs.get("sleep_after_wrong_answer", 4)
+		self._first_render = 1
+
+	def draw(self, verb_dict_origin, verb_dict_for_ask, expected_answear, score=None, score_points=10):
+		super(Victorina, self).draw(verb_dict_for_ask, 0 if self._first_render == 1 else 1)
+		self._first_render = 0
+		row_after = 0 
+		if score is not None:
+			print("socre: " + str(score))
+			row_after += 1
+		print("your answer: ", end='', flush=True)
+		answer = GetLine.await_for_enter()
+		answer = answer.strip().lower()
+		super(Victorina, self).draw(verb_dict_origin, row_after)
+		if answer == expected_answear:
+			if score is not None:
+				score += score_points
+				print("socre: " + str(score))
+			print("your answer: "+ Color('{autogreen}' + answer +'{/autogreen}'), end='', flush=True)
+			if self.sleep_after_right_answer > 0:
+				time.sleep(self.sleep_after_right_answer)
+		else:
+			if score is not None:
+				print("socre: " + str(score))
+			answer = re.sub('([0-9a-zA-Z])', lambda x: x.group(0) + '\u0336', answer)
+			print("your answer: "+ Color('{autored}' + answer + '{/autored} ' + Color('{autogreen}' + expected_answear +'{/autogreen}')), end='', flush=True)
+			if self.sleep_after_wrong_answer > 0:
+				time.sleep(self.sleep_after_wrong_answer)
+		return score
+
 #"""
 if __name__=='__main__':
 	import sys
 	print("hello")
-
-	stable = SimpleTable()
+	
+	victorina = Victorina()
+	score = 0
 	for verb in iter(IrregularVerbs()):
-		stable.draw(verb)
-		GetLine.await_for_enter({" ": {"break": 1}, "\x1b[C": {"break": 1}})
+		riddle_verb = copy.deepcopy(verb)
+		# ["infinitive", "past_simple", "past_participle"]
+		expected_answer = riddle_verb["past_simple"]["verb"]
+		lenght = max([len(riddle_verb["past_simple"]["verb"]), len(riddle_verb["past_simple"]["ipa"])])
+		riddle_placeholder = " "*int((lenght - 1)/2) + '?' + " "*int((lenght - 1)/2)
+		riddle_verb["past_simple"] = {"verb": riddle_placeholder, "ipa": riddle_placeholder}
+		score = victorina.draw(verb, riddle_verb, expected_answer, score)
+
+	#stable = SimpleTable()
+	#for verb in iter(IrregularVerbs()):
+	#	stable.draw(verb)
+	#	GetLine.await_for_enter({" ": {"break": 1}, "\x1b[C": {"break": 1}})
 	
 	sys.exit()
 	data = [

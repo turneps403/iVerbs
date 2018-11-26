@@ -11,7 +11,7 @@ class VerbAsciiTable(AsciiTable):
 
 	def replace_draw(self, row_after_table=0):
 		if self._draw_area != 0:
-			sys.stdout.write("\033[F") # go to one row up
+			sys.stdout.write("\033[F\n\033[K\033[F") # go to one row up
 			for _ in range(1, self._draw_area + row_after_table):
 				sys.stdout.write("\033[K\n\033[F\033[F") # go to start and clean all row after that go up-up
 				
