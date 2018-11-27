@@ -1,4 +1,3 @@
-======
 iVerbs
 ======
 
@@ -6,7 +5,16 @@ Time for real things.
  
 Please, meet with **console trainer** irregular verbs. Don't think you aren't too cool for this. You are cool. Give yourself some irregular verbs. 
 
-Are you going to study it? Do it right ~~now~~, ~~today~~ or maybe this week.
+.. raw:: html
+	
+	.strike {
+	  text-decoration: line-through;
+	}
+
+.. role:: strike
+    :class: strike
+
+Are you going to study it? Do it right :strike:`now`, ~~today~~ or maybe this week.
 
 Quickstart
 ==========
