@@ -23,13 +23,14 @@ Study mode
 ==========
 
 .. image:: img/study1.gif
-   :alt: Foo Bar
+   :alt: just study
 
 
 Test mode
 =========
 
-
+.. image:: img/test1.gif
+	:alt: game
 
 Changelog
 =========
