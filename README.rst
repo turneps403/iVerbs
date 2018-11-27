@@ -5,18 +5,10 @@ Time for real things.
  
 Please, meet with **console trainer** irregular verbs. Don't think you aren't too cool for this. You are cool. Give yourself some irregular verbs. 
 
-.. raw:: html
-	
-	<style>
-		.strike {
-		  text-decoration: line-through;
-		}
-	</style>
-
 .. role:: raw-role(raw)
    :format: html latex
 
-Are you going to study it? Do it right :raw-role:`<i>now<\i>`, ~~today~~ or maybe this week.
+Are you going to study it? Do it right :raw-role:`<strike>now</strike>`, ~~today~~ or maybe this week.
 
 Quickstart
 ==========
