@@ -6,10 +6,7 @@ Time for real things.
  
 Please, meet with **console trainer** irregular verbs. Don't think you aren't too cool for this. You are cool. Give yourself some irregular verbs. 
 
-.. role:: strike
-    :class: strike
-
-Are you going to study it? Do it right :strike:`now`, :strike:`today` or maybe this week.
+Are you going to study it? Do it right ~~now~~, ~~today~~ or maybe this week.
 
 Quickstart
 ==========
@@ -19,6 +16,16 @@ Quickstart
 	git clone pp
 	cd pp
 	python3 iverb.py
+
+Study mode
+==========
+![some alt](https://i.gifer.com/cqx.gif)
+
+
+Test mode
+=========
+
+
 
 Changelog
 =========
