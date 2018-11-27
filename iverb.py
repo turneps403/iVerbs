@@ -14,7 +14,7 @@ def weighted_choice(choices):
 			return c
 		upto += w
 
-choice = HorizontalOptions(["study", "game"]).choice()
+choice = HorizontalOptions(["study", "test"]).choice()
 if choice == 0:
 	stable = SimpleTable()
 	for verb in iter(IrregularVerbs()):

@@ -1,2 +1,0 @@
-# bsGridEngineer
-very simple editor
