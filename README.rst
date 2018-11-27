@@ -8,21 +8,21 @@ Please, meet with **console trainer** irregular verbs. Don't think you aren't to
 .. role:: raw-role(raw)
    :format: html latex
 
-Are you going to study it? Do it right :raw-role:`<strike>now</strike>`, ~~today~~ or maybe this week.
+Are you going to study it? Do it right :raw-role:`<strike> now </strike>`, :raw-role:`<strike> today </strike>` or maybe this week.
 
 Quickstart
 ==========
 
 .. code:: bash
 
-	git clone pp
-	cd pp
+	git clone https://github.com/turneps403/iVerbs.git
+	cd iVerbs
 	python3 iverb.py
 
 Study mode
 ==========
 
-.. image:: https://i.gifer.com/cqx.gif
+.. image:: img/study1.gif
    :alt: Foo Bar
 
 
