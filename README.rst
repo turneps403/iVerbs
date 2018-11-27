@@ -13,10 +13,10 @@ Please, meet with **console trainer** irregular verbs. Don't think you aren't to
 		}
 	</style>
 
-.. role:: strike(i)
-    :class: strike
+.. role:: raw-role(raw)
+   :format: html latex
 
-Are you going to study it? Do it right :strike:`now`, ~~today~~ or maybe this week.
+Are you going to study it? Do it right :raw-role:`<i>now<\i>`, ~~today~~ or maybe this week.
 
 Quickstart
 ==========
