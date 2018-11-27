@@ -17,6 +17,7 @@ Quickstart
 
 	git clone https://github.com/turneps403/iVerbs.git
 	cd iVerbs
+	pip3 install -r requirements.txt
 	python3 iverb.py
 
 Study mode
