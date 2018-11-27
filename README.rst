@@ -3,7 +3,7 @@ iVerbs
 
 Time for real things.
  
-Please, meet with **console trainer** irregular verbs. Don't think you aren't too cool for this. You are cool. Give yourself some irregular verbs. 
+Please, meet with **console trainer** irregular verbs. Don't think you aren't too cool for this. You are cool. Give yourself some irregular verbs with IPA (International Phonetic Alphabet). 
 
 .. role:: raw-role(raw)
    :format: html latex
