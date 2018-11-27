@@ -13,7 +13,7 @@ Please, meet with **console trainer** irregular verbs. Don't think you aren't to
 		}
 	</style>
 
-.. role:: strike
+.. role:: strike(i)
     :class: strike
 
 Are you going to study it? Do it right :strike:`now`, ~~today~~ or maybe this week.
