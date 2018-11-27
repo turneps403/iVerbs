@@ -7,9 +7,11 @@ Please, meet with **console trainer** irregular verbs. Don't think you aren't to
 
 .. raw:: html
 	
-	.strike {
-	  text-decoration: line-through;
-	}
+	<style>
+		.strike {
+		  text-decoration: line-through;
+		}
+	</style>
 
 .. role:: strike
     :class: strike
