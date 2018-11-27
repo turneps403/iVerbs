@@ -19,7 +19,9 @@ Quickstart
 
 Study mode
 ==========
-![some alt](https://i.gifer.com/cqx.gif)
+
+.. image:: https://i.gifer.com/cqx.gif
+   :alt: Foo Bar
 
 
 Test mode
