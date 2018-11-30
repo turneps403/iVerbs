@@ -42,7 +42,7 @@ class GetLine:
                     action.get("action")()
                 if action.get("break"):
                     if callable(action.get("break")):
-                        dargs = { "key": tap_key, "line": term_line}
+                        dargs = {"key": tap_key, "line": term_line}
                         action.get("break")(dargs)
                         if dargs.get("ret", 0) == 1:
                             break
@@ -50,7 +50,7 @@ class GetLine:
                         break
                 elif action.get("continue"):
                     if callable(action.get("continue")):
-                        dargs = { "key": tap_key, "line": term_line}
+                        dargs = {"key": tap_key, "line": term_line}
                         # use dargs.setdefault("ret", 1)
                         action.get("continue")(dargs)
                         if dargs.get("ret", 0) == 1:

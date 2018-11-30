@@ -17,12 +17,14 @@ class IrregularVerbs:
             for verb in self._iverb:
                 verb["audio"] = os.path.abspath(__file__ + "/../../audio/" + verb["audio"])
 
-    def iverb(self):
-        return copy.deepcopy(self._iverb)
+    def as_list(self, whith_shuffle=False):
+        ret = copy.deepcopy(self._iverb)
+        if whith_shuffle:
+            shuffle(ret)
+        return ret
 
     def __iter__(self):
-        iverb = self.iverb()
-        # shuffle(iverb)
+        iverb = self.as_list(True)
         return iter(iverb)  # my little trick
 
 
