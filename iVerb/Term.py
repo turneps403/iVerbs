@@ -74,7 +74,9 @@ class GetLine:
                 
                 tap_code = ord(tap_key[:1])
                 if tap_code in [keycode.BS, keycode.DEL]:
-                    print("\b \b", end="", flush=True)
+                    if len(term_line) > 0:
+                        print("\b \b", end="", flush=True)
+                        term_line = term_line[0:-1]
                 elif tap_code == keycode.CR:
                     if right_position > 0:
                         print_key = term_line[(len(term_line) - right_position):len(term_line)]

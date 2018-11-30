@@ -44,7 +44,7 @@ class VictorinaTable(SimpleTable):
         super(VictorinaTable, self).__init__(*args, **kwargs)
         self._first_render = 1
 
-    def draw(self, verb_dict_origin, verb_dict_for_ask, expected_answear, score=None, score_points=10):
+    def draw(self, verb_dict_origin, verb_dict_for_ask, expected_answear, score=None, score_points=10, tap_action=None):
         super(VictorinaTable, self).draw(verb_dict_for_ask, 0 if self._first_render == 1 else 1)
         self._first_render = 0
         row_after = 0 
@@ -52,7 +52,7 @@ class VictorinaTable(SimpleTable):
             print("socre: " + str(score))
             row_after += 1
         print("your answer: ", end="", flush=True)
-        answer = GetLine.await_for_enter()
+        answer = GetLine.await_for_enter(tap_action)
         answer = answer.strip().lower()
         super(VictorinaTable, self).draw(verb_dict_origin, row_after)
         if answer == expected_answear:

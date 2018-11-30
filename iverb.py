@@ -32,6 +32,8 @@ def weighted_choice(choices):
 
 
 choice = HorizontalOptions(["study", "test"]).choice()
+if audio_enable:
+    print("tap \033[1mshift+a\033[0m to repeat pronounciation and \033[1mesc\033[0m to exit")
 if choice == 0:
     stable = SimpleTable()
     audio_channel = None
@@ -49,8 +51,8 @@ if choice == 0:
             "A": {
                 "action": lambda: (
                     audio_enable and audio_channel.stop(),
-                    audio_enable and audio_channel.play(pygame.mixer.Sound(verb["audio"])),
-                    audio_enable and print("\b \b", end="", flush=True)
+                    audio_enable and audio_channel.play(pygame.mixer.Sound(verb["audio"]))
+                    #audio_enable and print("\b \b", end="", flush=True)
                 ),
                 "continue": lambda arg: (
                     audio_enable and arg.setdefault("ret", 1)
@@ -60,13 +62,31 @@ if choice == 0:
 else:
     victorina = VictorinaTable()
     score = 0
+    audio_channel = None
     for verb in iter(IrregularVerbs()):
         riddle_verb = copy.deepcopy(verb)
         riddle_target = weighted_choice({"infinitive": 10, "past_simple": 40, "past_participle": 25})
         expected_answer = riddle_verb.get(riddle_target).get("verb")
         lenght = max([len(riddle_verb.get(riddle_target).get("verb")), len(riddle_verb.get(riddle_target).get("ipa"))])
-        riddle_placeholder = " " * (lenght // 2) + "?" + " " * (lenght - 1 - (lenght // 2))
-        riddle_verb["past_simple"] = {"verb": riddle_placeholder, "ipa": riddle_placeholder}
-        score = victorina.draw(verb, riddle_verb, expected_answer, score)
+        riddle_placeholder = " " * (lenght // 2) + "\033[1m?\033[0m" + " " * (lenght - 1 - (lenght // 2))
+        riddle_verb[riddle_target] = {"verb": riddle_placeholder, "ipa": riddle_placeholder }
+        if audio_enable:
+            if audio_channel is not None:
+                audio_channel.stop()
+            else:
+                audio_channel = pygame.mixer.find_channel(True)
+            audio_channel.play(pygame.mixer.Sound(riddle_verb["audio"]))
+        score = victorina.draw(verb, riddle_verb, expected_answer, score, 10, {
+            "A": {
+                "action": lambda: (
+                    audio_enable and audio_channel.stop(),
+                    audio_enable and audio_channel.play(pygame.mixer.Sound(riddle_verb["audio"]))
+                    #audio_enable and print("\b \b", end="", flush=True)
+                ),
+                "continue": lambda arg: (
+                    audio_enable and arg.setdefault("ret", 1)
+                )
+            }
+        })
 
 sys.exit()
