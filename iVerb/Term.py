@@ -35,6 +35,29 @@ class GetLine:
         term_line = ""
         while True:
             tap_key = GetKey.await_tap()
+
+            if tap_action and tap_action.get(tap_key, None):
+                action = tap_action.get(tap_key)
+                if action.get("action", None):
+                    action.get("action")()
+                if action.get("break"):
+                    if callable(action.get("break")):
+                        dargs = { "key": tap_key, "line": term_line}
+                        action.get("break")(dargs)
+                        if dargs.get("ret", 0) == 1:
+                            break
+                    elif action.get("break") == 1: 
+                        break
+                elif action.get("continue"):
+                    if callable(action.get("continue")):
+                        dargs = { "key": tap_key, "line": term_line}
+                        # use dargs.setdefault("ret", 1)
+                        action.get("continue")(dargs)
+                        if dargs.get("ret", 0) == 1:
+                            continue
+                    elif action.get("continue") == 1:
+                        continue
+
             if not tap_key.isprintable():
                 if tap_key == "\x1b[D":
                     # left arrow
@@ -71,14 +94,6 @@ class GetLine:
                     print(print_key + "\b" * right_position, end="", flush=True)
                     term_line = term_line[0:(len(term_line) - right_position)] + tap_key + term_line[(len(term_line) - right_position):len(term_line)]
 
-            if tap_action and tap_action.get(tap_key, None):
-                # just one action and go back
-                action = tap_action.get(tap_key)
-                if action.get("action", None):
-                    action.get("action")(term_line)
-                if action.get("break", 0) > 0:
-                    break
-            
         return term_line
 
 

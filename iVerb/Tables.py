@@ -14,13 +14,15 @@ class IrregularVerbs:
             json_path = os.path.join(os.path.dirname(__file__), "..", "data", "iVerb.json")
         with open(json_path, "r") as f:
             self._iverb = json.load(f)
+            for verb in self._iverb:
+                verb["audio"] = os.path.abspath(__file__ + "/../../audio/" + verb["audio"])
 
     def iverb(self):
         return copy.deepcopy(self._iverb)
 
     def __iter__(self):
         iverb = self.iverb()
-        shuffle(iverb)
+        # shuffle(iverb)
         return iter(iverb)  # my little trick
 
 
