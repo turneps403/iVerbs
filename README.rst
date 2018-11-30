@@ -1,5 +1,5 @@
 iVerbs 🔊
-======
+=========
 
 Time for real things.
  
@@ -39,5 +39,5 @@ Changelog
 1.0.0 - 2018-11-27
 ------------------
 
-* Initial release.
+* Initial release 👍
 
