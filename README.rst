@@ -1,14 +1,9 @@
-iVerbs 🔊
-=========
+🎧 iVerbs (version audio)
+=========================
 
-Time for real things.
- 
-Please, meet with **console trainer** irregular verbs. Don't think you aren't too cool for this. You are cool. Give yourself some irregular verbs with IPA (International Phonetic Alphabet). 
+The script allows you to study and train **irregular verbs**. Moreover, this version includes an audio file with pronunciation three forms and IPA (International Phonetic Alphabet) for every verb.
 
-.. role:: raw-role(raw)
-   :format: html latex
-
-Are you going to study it? Do it right :raw-role:`<strike> now </strike>`, :raw-role:`<strike> today </strike>` or maybe this week.
+And yes, it's console python-script.
 
 Quickstart
 ==========
@@ -23,21 +18,27 @@ Quickstart
 Study mode
 ==========
 
-.. image:: img/study1.gif
+.. image:: img/g1.gif
    :alt: just study
 
 
 Test mode
 =========
 
-.. image:: img/test1.gif
+.. image:: img/g2.gif
 	:alt: game
 
 Changelog
 =========
 
-1.0.0 - 2018-11-27
+1.0 - 2018-11-27
 ------------------
 
 * Initial release 👍
+
+2.0 - 2018-12-03
+__________________
+
+* Version audio
+
 
