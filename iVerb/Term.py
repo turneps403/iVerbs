@@ -39,7 +39,8 @@ class GetLine:
             if tap_action and tap_action.get(tap_key, None):
                 action = tap_action.get(tap_key)
                 if action.get("action", None):
-                    action.get("action")()
+                    dargs = {"key": tap_key, "line": term_line}
+                    action.get("action")(dargs)
                 if action.get("break"):
                     if callable(action.get("break")):
                         dargs = {"key": tap_key, "line": term_line}
@@ -75,8 +76,8 @@ class GetLine:
                 tap_code = ord(tap_key[:1])
                 if tap_code in [keycode.BS, keycode.DEL]:
                     if len(term_line) > 0:
-                        print("\b \b", end="", flush=True)
-                        term_line = term_line[0:-1]
+                        print("\b" + term_line[len(term_line) - right_position:] + " " + "\b" * (len(term_line[len(term_line) - right_position:]) + 1), end="", flush=True)
+                        term_line = term_line[0:len(term_line) - right_position - 1] + term_line[len(term_line) - right_position:]
                 elif tap_code == keycode.CR:
                     if right_position > 0:
                         print_key = term_line[(len(term_line) - right_position):len(term_line)]
