@@ -4,6 +4,7 @@
 The script allows you to study and train **irregular verbs**. Moreover, this version includes an audio file with pronunciation three forms and IPA (International Phonetic Alphabet) for every verb.
 
 There are three games:
+
 * see, listening and repeat
 * see, listening and fill in an empty cell
 * listening and write all three forms of a verb
