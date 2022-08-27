@@ -19,6 +19,13 @@ Quickstart
 	pip3 install -r requirements.txt
 	python3 iverb.py
 
+or docker:
+
+.. code:: bash
+        docker build -t iverb .
+        docker run --rm -it --device /dev/snd iverb
+
+
 Study mode
 ==========
 
